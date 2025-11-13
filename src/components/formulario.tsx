@@ -2,23 +2,9 @@ import { Input } from "./input";
 import React, { useState } from "react";
 
 export const Formulario = () => {
-  const [valorNombre, setValorNombre] = useState("nombre");
-
-  const handleNombre = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValorNombre(e.target.value);
-  };
-
-  const [valorEmail, setValorEmail] = useState("email");
-
-  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValorEmail(e.target.value);
-  };
-
-  const [valorMensaje, setValorMensaje] = useState("mensaje");
-
-  const handleMensaje = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setValorMensaje(e.target.value);
-  };
+  const [valorNombre, setValorNombre] = useState("");
+  const [valorEmail, setValorEmail] = useState("");
+  const [valorMensaje, setValorMensaje] = useState("");
 
   return (
     <div>
@@ -26,9 +12,9 @@ export const Formulario = () => {
         nombre={valorNombre}
         email={valorEmail}
         mensaje={valorMensaje}
-        onNombreChange={handleNombre}
-        onEmailChange={handleEmail}
-        onMensajeChange={handleMensaje}
+        onNombreChange={setValorNombre}
+        onEmailChange={setValorEmail}
+        onMensajeChange={setValorMensaje}
       />
     </div>
   );

@@ -15,6 +15,17 @@ export const Input = ({
   onEmailChange,
   onMensajeChange,
 }: Props) => {
+  const handleNombre = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onNombreChange(e.target.value);
+  };
+
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onEmailChange(e.target.value);
+  };
+
+  const handleMensaje = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    onMensajeChange(e.target.value);
+  };
   return (
     <>
       <div className="flex flex-col gap-4">
@@ -22,7 +33,7 @@ export const Input = ({
         <input
           type="text"
           value={nombre}
-          onChange={onNombreChange}
+          onChange={handleNombre}
           placeholder="Ingresa tu nombre"
           className="w-full px-4 py-2 border border-slate-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
         ></input>
@@ -30,7 +41,7 @@ export const Input = ({
         <input
           type="text"
           value={email}
-          onChange={onEmailChange}
+          onChange={handleEmail}
           placeholder="Ingresa tu correo"
           className="w-full px-4 py-2 border border-slate-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
         ></input>
@@ -39,7 +50,7 @@ export const Input = ({
         </span>
         <textarea
           value={mensaje}
-          onChange={onMensajeChange}
+          onChange={handleMensaje}
           placeholder="Escribe aquí..."
           className="
     w-full
