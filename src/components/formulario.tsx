@@ -1,5 +1,6 @@
 import { Input } from "./input";
 import React, { useState } from "react";
+import { Button } from "./button";
 
 export const Formulario = () => {
   const [valorNombre, setValorNombre] = useState("");
@@ -79,6 +80,8 @@ export const Formulario = () => {
       >
         Enviar
       </button>
+
+      <Button />
     </form>
   );
 };
