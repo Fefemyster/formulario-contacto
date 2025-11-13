@@ -21,8 +21,8 @@ export const Input = ({ nombre, email, mensaje }: Props) => {
 
   const [valorMensaje, setValorMensaje] = useState(mensaje);
 
-  const handleMensaje = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValorNombre(e.target.value);
+  const handleMensaje = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setValorMensaje(e.target.value);
   };
 
   return (
@@ -48,6 +48,8 @@ export const Input = ({ nombre, email, mensaje }: Props) => {
           Mensaje:
         </span>
         <textarea
+          value={valorMensaje}
+          onChange={handleMensaje}
           placeholder="Escribe aquí..."
           className="
     w-full

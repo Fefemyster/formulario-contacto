@@ -3,7 +3,7 @@ import { Input } from "./input";
 export const Formulario = () => {
   return (
     <div>
-      <Input nombre="" email="" />
+      <Input nombre="" email="" mensaje="" />
     </div>
   );
 };
