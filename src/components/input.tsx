@@ -65,8 +65,8 @@ export const Input = ({
         />
 
         <div className="mt-4 text-slate-600">
-          <p>📛 Nombre ingresado: {valorNombre}</p>
-          <p>📧 Correo ingresado: {valorEmail}</p>
+          <p>📛 Nombre ingresado: {nombre}</p>
+          <p>📧 Correo ingresado: {email}</p>
           <p>💬 Mensaje ingresado: {mensaje}</p>
         </div>
       </div>
