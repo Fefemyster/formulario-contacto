@@ -45,13 +45,11 @@ export const Formulario = () => {
     valorEmail &&
     valorMensaje;
 
+  //Alert solo simula que se ha enviado correctamente el formulario, no valida nada
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formValido) {
-      alert("❌ Corrige los errores antes de enviar.");
-      return;
-    }
-    alert("✅ Formulario enviado correctamente");
+
+    alert("¡Mensaje enviado correctamente!");
   };
 
   return (

@@ -21,8 +21,6 @@ export const Input = ({
   errorEmail,
   errorMensaje,
 }: Props) => {
-  //Estados de error
-
   return (
     <>
       <div className="flex flex-col gap-4">
